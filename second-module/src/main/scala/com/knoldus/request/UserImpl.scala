@@ -6,10 +6,10 @@ import com.typesafe.scalalogging.Logger
 
 class UserImpl(userValidator: UserValidator) {
   val loggers = Logger(getClass)
-  loggers.info("It is implementation part of Employee")
+  loggers.info("It is implementation part of User")
 
   def createUser(user: User): Option[String] = {
-    loggers.info("Inside the create Employee method")
+    loggers.info("Inside the create User method")
     if (userValidator.userIsValid(user)) Option(user.emailId)
     else None
   }

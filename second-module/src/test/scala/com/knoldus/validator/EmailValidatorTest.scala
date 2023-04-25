@@ -21,46 +21,45 @@ class EmailValidatorTest extends AnyFlatSpec with Matchers {
     assert(expectedOutput != actualOutput)
   }
 
-  "emailIdIsValid" should "return false if mail id not in db" in {
-    val emailId = "google@gmail.com"
-    val actualOutput = emailValidator.emailIdIsValid(emailId)
-    val expectedOutput = false
-    expectedOutput shouldBe actualOutput
-  }
-
-  "emailIdIsValid" should "not return true if mail id not in db" in {
+  "emailIdIsValid" should "return false if mail id not validate" in {
     val emailId = "google@gmail.com"
     val actualOutput = emailValidator.emailIdIsValid(emailId)
     val expectedOutput = true
+    expectedOutput shouldBe actualOutput
+  }
+
+  "emailIdIsValid" should "not return false if mail id not validate" in {
+    val emailId = "google@gmail.com"
+    val actualOutput = emailValidator.emailIdIsValid(emailId)
+    val expectedOutput = false
     assert(expectedOutput != actualOutput)
   }
 
-  "emailIdIsValid" should "return true if mail id in db" in {
+  "emailIdIsValid" should "return true if mail id validate" in {
     val emailId = "knoldus@gmail.com"
     val actualOutput = emailValidator.emailIdIsValid(emailId)
     val expectedOutput = true
     expectedOutput shouldBe actualOutput
   }
 
-  "emailIdIsValid" should "not return false if mail id in db" in {
+  "emailIdIsValid" should "not return false if mail validate" in {
     val emailId = "knoldus@gmail.com"
     val actualOutput = emailValidator.emailIdIsValid(emailId)
     val expectedOutput = false
     assert(expectedOutput != actualOutput)
   }
 
-  "emailIdIsValid" should "return true if other mail id in db" in {
+  "emailIdIsValid" should "return true if other mail id validate" in {
     val emailId = "philips123@gmail.com"
     val actualOutput = emailValidator.emailIdIsValid(emailId)
     val expectedOutput = true
     expectedOutput shouldBe actualOutput
   }
 
-  "emailIdIsValid" should "not return true if mail id in db" in {
+  "emailIdIsValid" should "not return true if mail id validate" in {
     val emailId = "philips123@gmail.com"
     val actualOutput = emailValidator.emailIdIsValid(emailId)
     val expectedOutput = false
     assert(expectedOutput != actualOutput)
   }
-
 }

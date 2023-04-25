@@ -31,4 +31,8 @@ system
 > sbt clean coverage test   
 > sbt coverageReport
 
+OUTPUT
+![Screenshot from 2023-04-25 18-04-44](https://user-images.githubusercontent.com/124979629/234277876-0e18f44f-4ac3-4d23-b6cb-c88f8798a452.png)
 
+![Screenshot from 2023-04-25 18-05-40](https://user-images.githubusercontent.com/124979629/234277899-e027f05e-93ac-4a9e-b6ee-9b96e3a56508.png)
+![Screenshot from 2023-04-25 18-07-09](https://user-images.githubusercontent.com/124979629/234278102-d6e06770-ea7a-4a54-955a-1474745486f1.png)

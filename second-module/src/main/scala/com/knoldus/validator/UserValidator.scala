@@ -8,7 +8,7 @@ class UserValidator {
   val loggers = Logger(getClass)
 
   def userIsValid(user: User): Boolean = {
-    loggers.info("Validating the employee information")
+    loggers.info("Validating the user information")
     val companyReadDto = new CompanyReadDto
     val emailValidator = new EmailValidator
     val isEmailIdValid = emailValidator.emailIdIsValid(user.emailId)
@@ -16,7 +16,7 @@ class UserValidator {
       case Some(_) => true
       case None => false
     }
-    loggers.info("Both mail id and company of employee validated")
+    loggers.info("Both mail id and company of user validated")
     if (isEmailIdValid && isCompanyExists) true
     else false
   }

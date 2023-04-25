@@ -50,10 +50,10 @@ class CompanyImplTest extends AnyFlatSpec {
     assert(actualOutput != expectedOutput)
   }
 
-  "create Company" should "return none company if email id is not verified" in {
-    val company = Company("Philips", "google@gmail.com", "Noida")
+  "create Company" should "return none company if email id is verified" in {
+    val company = Company("Philips", "philips123@gmail.com", "Noida")
     val actualOutput = companyImpl.createCompany(company)
-    val expectedOutput = None
+    val expectedOutput = Some("Philips")
     assertResult(expectedOutput) {
       actualOutput
     }

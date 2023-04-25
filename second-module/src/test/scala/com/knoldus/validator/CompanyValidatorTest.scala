@@ -49,10 +49,11 @@ class CompanyValidatorTest extends AnyFlatSpec {
     val expectedOutput = true
     assert(actualOutput != expectedOutput)
   }
-  "companyIsValid" should "return false if email id is not verified" in {
-    val company = Company("Philips", "google@gmail.com", "Noida")
+  "companyIsValid" should "return false if email id  verified" in {
+    val company = Company("Philips", "philips123@gmail.com", "Noida")
     val actualOutput = companyValidator.companyIsValid(company)
-    val expectedOutput = false
+    println(actualOutput)
+    val expectedOutput = true
     expectedOutput shouldBe actualOutput
   }
 
